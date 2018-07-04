@@ -1,0 +1,6 @@
+firebase.json
+firebase-debug.log
+.firebaserc
+src/firebase-config.json
+node_modules/
+.idea/
