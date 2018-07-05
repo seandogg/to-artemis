@@ -15,20 +15,20 @@
  */
 
 // React core.
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
 // Firebase.
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from "firebase/app";
+import "firebase/auth";
+import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
 // Styles
-import styles from './app.css'; // This uses CSS modules.
-import './firebaseui-styling.global.css'; // Import globally.
+import styles from "./app.css"; // This uses CSS modules.
+import "./firebaseui-styling.global.css"; // Import globally.
 
 // Get the Firebase config from the auto generated file.
-const firebaseConfig = require('./firebase-config.json').result;
+const firebaseConfig = require("./firebase-config.json").result;
 
 // Instantiate a Firebase app.
 const firebaseApp = firebase.initializeApp(firebaseConfig);
@@ -38,7 +38,7 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
  */
 class App extends React.Component {
   uiConfig = {
-    signInFlow: 'popup',
+    signInFlow: "popup",
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -75,7 +75,7 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.logo}>
-          <i className={styles.logoIcon + ' material-icons'}>photo</i> My App
+          <i className={styles.logoIcon + " material-icons"}>photo</i>My App
         </div>
         <div className={styles.caption}>This is a cool demo app</div>
         {this.state.isSignedIn !== undefined && !this.state.isSignedIn &&
